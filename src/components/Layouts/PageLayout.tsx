@@ -4,7 +4,7 @@
 
 // import React from "react";
 // import { IoChatbubblesSharp } from "react-icons/io5";
-// function Layout() {
+// function PageLayout() {
 //   return (
 //     <div className="layout relative ">
 //       <header className="sticky top-0 z-50 bg-amber-500">
@@ -40,22 +40,46 @@
 //   );
 // }
 
-// export default Layout;
+// export default PageLayout;
 
 /* ============================================================================================
-                                    Case 1: Using Grid
+                                    Case 2: Using Grid
 ============================================================================================*/
 
+"use client";
 import React from "react";
 
-function Layout() {
+export default function PageLayout() {
   return (
-    <div className="layout grid
-    grid-cols-1
-    ">
-      <div></div>
+    <div className="grid min-h-screen grid-rows-[auto_1fr_auto_auto]">
+      <header className="row-start-1 sticky top-0 z-50 bg-amber-500">
+        <nav className="mx-auto p-5 text-center text-4xl">Navbar</nav>
+      </header>
+
+      <main className="row-start-2 bg-green-600">
+        <h1 className="py-4 text-center text-4xl">Main Body</h1>
+
+        <section className="grid gap-10 p-4 grid-cols-2 place-items-center">
+          <div className="bg-pink-400 p-70">
+            <p className="text-center text-4xl">Box 1</p>
+          </div>
+          <div className="bg-yellow-300 p-70">
+            <p className="text-center text-4xl">Box 2</p>
+          </div>
+        </section>
+      </main>
+
+      <section className="row-start-3 flex items-center justify-center bg-black px-16 py-4">
+        <div className="rounded-[2rem] border-2 border-white p-4">
+          <p className="text-center text-6xl text-white">
+            This is the layout made by Information Warrior.
+          </p>
+        </div>
+      </section>
+
+      <footer className="row-start-4 grid place-items-center py-12 text-4xl">
+        This is Footer
+      </footer>
     </div>
   );
 }
-
-export default Layout;

@@ -1,27 +1,34 @@
 import React from "react";
 
-function YoloBlastGameLayout() {
+export default function YoloBlastGameLayout() {
   return (
-    <div className="blast-page flex">
-      <div className="game-container grid grid-cols-2 border-2 border-black">
-        <div className="player-stat">
-          <p>Player Stats Section</p>
+    <div className="blast-page relative flex h-full min-h-[90vh] max-w-[1440px] flex-col bg-gray-300">
+      <div className="game-container grid grid-cols-[288px_1fr_360px] gap-1 p-1">
+        {/* Column 1: Players */}
+        <div className="players col-start-1 row-start-1 border border-white">
+          Player Stats Area
         </div>
-        <div className="spin-wheel">
-          <p>Spin Wheel Section</p>
+
+        {/* Column 2: Spin Wheel (row 1) + Round Contents (row 2) */}
+        <div className="col-start-2 grid grid-rows-[auto_1fr] gap-1">
+          <div className="spin-wheel row-start-1 border border-white">
+            Spin Wheel Area
+          </div>
+          <div className="round-contents row-start-2 border border-white">
+            Round Contents Area
+          </div>
         </div>
-        <div className="round-contents">
-          <p>Round Content Section</p>
-        </div>
-        <div className="current-round">
-          <p>Current Round Section</p>
-        </div>
-        <div className="bet-panel">
-          <p>Bet Panel Section</p>
+
+        {/* Column 3: Current Round (row 1) + Bet Panel (row 2) */}
+        <div className="col-start-3 grid grid-rows-[auto_1fr] gap-1">
+          <div className="current-round row-start-1 border border-white">
+            Current Round Area
+          </div>
+          <div className="bet-panel row-start-2 border border-white">
+            Bet Panel Area
+          </div>
         </div>
       </div>
     </div>
   );
 }
-
-export default YoloBlastGameLayout;

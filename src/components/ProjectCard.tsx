@@ -1,17 +1,13 @@
-// components/ProjectCard.tsx
 "use client";
-import Image from "next/image";
 
 export default function ProjectCard({
   title,
   desc,
   tags,
-  thumb,
 }: {
   title: string;
   desc: string;
   tags?: string[];
-  thumb?: string;
 }) {
   return (
     <div className="group relative overflow-hidden rounded-xl border bg-white shadow hover:shadow-lg transition">

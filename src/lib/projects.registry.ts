@@ -21,12 +21,28 @@ export const PROJECTS: ProjectDef[] = [
     loader: () => import("@/components/Projects/CssCard"),
   },
   {
+    slug: "page-layout",
+    title: "Page Layout",
+    description: "Small card with hover glassmorphism & shadow.",
+    tags: ["css", "html", "ui"],
+    thumb: "/logo.png",
+    loader: () => import("@/components/Layouts/PageLayout"),
+  },
+  {
     slug: "grid-layout",
     title: "Grid Layout",
     description: "Small card with hover glassmorphism & shadow.",
     tags: ["css", "html", "ui"],
     thumb: "/logo.png",
     loader: () => import("@/components/Layouts/GridLayout"),
+  },
+  {
+    slug: "yolo-blast-game-layout",
+    title: "Yolo Blast Game Layout",
+    description: "Small card with hover glassmorphism & shadow.",
+    tags: ["css", "html", "ui"],
+    thumb: "/logo.png",
+    loader: () => import("@/components/Layouts/YoloBlastGameLayout"),
   },
   // add more as you learn: "microsoft-clone", "spotify-clone", etc.
 ];
