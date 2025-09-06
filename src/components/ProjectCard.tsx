@@ -15,20 +15,9 @@ export default function ProjectCard({
 }) {
   return (
     <div className="group relative overflow-hidden rounded-xl border bg-white shadow hover:shadow-lg transition">
-      {thumb ? (
-        <Image
-          src={thumb}
-          alt={title}
-          width={250}
-          height={200}
-          className="h-40 w-full object-cover"
-        />
-      ) : (
-        <div className="h-40 w-full bg-neutral-100" />
-      )}
       <div className="p-4">
         <h3 className="font-semibold">{title}</h3>
-        <p className="mt-1 text-sm text-neutral-500 line-clamp-2">{desc}</p>
+        <p className="mt-1 text-sm text-neutral-500 line-clamp-3">{desc}</p>
         {tags?.length ? (
           <div className="mt-3 flex flex-wrap gap-2">
             {tags.map((t) => (
