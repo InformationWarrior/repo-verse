@@ -53,7 +53,7 @@ export default function PageLayout() {
   return (
     <div className="grid min-h-screen grid-rows-[auto_1fr_auto_auto]">
       <header className="row-start-1 sticky top-0 z-50 bg-amber-500">
-        <nav className="mx-auto p-5 text-center text-4xl">Navbar</nav>
+        <nav className="mx-auto h-20 text-center text-4xl items-center justify-center flex">Navbar</nav>
       </header>
 
       <main className="row-start-2 bg-green-600">

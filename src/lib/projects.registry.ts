@@ -13,6 +13,14 @@ export type ProjectDef = {
 
 export const PROJECTS: ProjectDef[] = [
   {
+    slug: "bookmark-manager",
+    title: "Bookmark Manager",
+    description: "Small card with hover glassmorphism & shadow.",
+    tags: ["css", "html", "ui"],
+    thumb: "/logo.png",
+    loader: () => import("@/components/Projects/BookmarkManager"),
+  },
+  {
     slug: "css-card",
     title: "CSS Card",
     description: "Small card with hover glassmorphism & shadow.",
@@ -44,7 +52,14 @@ export const PROJECTS: ProjectDef[] = [
     thumb: "/logo.png",
     loader: () => import("@/components/Layouts/YoloBlastGameLayout"),
   },
-  // add more as you learn: "microsoft-clone", "spotify-clone", etc.
+  {
+    slug: "ultra-edit-navbar",
+    title: "Ultra Edit Navbar",
+    description: "Small card with hover glassmorphism & shadow.",
+    tags: ["css", "html", "ui"],
+    thumb: "/logo.png",
+    loader: () => import("@/components/Clones/UltraEdit"),
+  },
 ];
 
 export const findProject = (slug: string) =>
